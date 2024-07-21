@@ -4,7 +4,8 @@
 # PLease read the GNU Affero General Public License in <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 
 FROM theteamultroid/ultroid:main
-
+RUN apt-get install python3 -y
+RUN apt-get install python3-pip -y
 # set timezone
 ENV TZ=Asia/Kolkata
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
